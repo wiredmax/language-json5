@@ -1,7 +1,8 @@
-# JSON language support in Atom
+# JSON5 language support in Atom
 
-Adds syntax highlighting of JSON files in Atom.
+Adds syntax highlighting of JSON5 files in Atom.
 
+Forked [from](https://github.com/atom/language-json)
 Originally [converted](http://atom.io/docs/latest/converting-a-text-mate-bundle)
 from the [JSON TextMate bundle](https://github.com/textmate/json.tmbundle).
 
