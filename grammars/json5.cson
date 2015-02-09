@@ -102,10 +102,10 @@
       }
     ]
   'key':
-    'name': 'string.key.json5'
     'patterns': [
       {
         'match': '[a-zA-Z0-9_-]'
+        'name': 'string.key.json5'
       }
       {
         'include': '#string'
