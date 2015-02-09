@@ -33,8 +33,11 @@
       }
     ]
   'constant':
-    'match': '\\b(?:true|false|null)\\b'
+    'match': '\\b(?:true|false|null|Infinity|NaN)\\b'
     'name': 'constant.language.json5'
+  'infinity':
+      'match': '(-)*\\b(?:Infinity|NaN)\\b'
+      'name': 'constant.language.json5'
   'number':
     'patterns': [
       {
@@ -125,6 +128,9 @@
     'patterns': [
       {
         'include': '#constant'
+      }
+      {
+        'include': '#infinity'
       }
       {
         'include': '#number'
