@@ -140,13 +140,17 @@
       }
     ]
   'key':
+    'name': 'string.key.json5'
     'patterns': [
+      {
+        'include': '#stringSingle'
+      }
+      {
+        'include': '#stringDouble'
+      }
       {
         'match': '[a-zA-Z0-9_-]'
         'name': 'string.key.json5'
-      }
-      {
-        'include': '#string'
       }
     ]
   'value':
