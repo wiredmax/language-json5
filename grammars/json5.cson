@@ -99,12 +99,32 @@
         'name': 'invalid.illegal.expected-dictionary-separator.json5'
       }
     ]
-  'string':
-    'begin': '[\'\"]'
+  'stringSingle':
+    'begin': '[\']'
     'beginCaptures':
       '0':
         'name': 'punctuation.definition.string.begin.json5'
-    'end': '[\'\"]'
+    'end': '[\']'
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.string.end.json5'
+    'name': 'string.quoted.json5'
+    'patterns': [
+      {
+        'match': '(?x:                # turn on extended mode\n                     \\\\                # a literal backslash\n                     (?:               # ...followed by...\n                       ["\\\\/bfnrt]     # one of these characters\n                       |               # ...or...\n                       u               # a u\n                       [0-9a-fA-F]{4}  # and four hex digits\n                     )\n                   )'
+        'name': 'constant.character.escape.json5'
+      }
+      {
+        'match': '\\\\.'
+        'name': 'invalid.illegal.unrecognized-string-escape.json5'
+      }
+    ]
+  'stringDouble':
+    'begin': '[\"]'
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.string.begin.json5'
+    'end': '[\"]'
     'endCaptures':
       '0':
         'name': 'punctuation.definition.string.end.json5'
@@ -142,7 +162,10 @@
         'include': '#number'
       }
       {
-        'include': '#string'
+        'include': '#stringSingle'
+      }
+      {
+        'include': '#stringDouble'
       }
       {
         'include': '#array'
