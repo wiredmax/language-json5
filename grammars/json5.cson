@@ -82,11 +82,11 @@
       }
     ]
   'string':
-    'begin': '"'
+    'begin': '[\'\"]'
     'beginCaptures':
       '0':
         'name': 'punctuation.definition.string.begin.json5'
-    'end': '"'
+    'end': '[\'\"]'
     'endCaptures':
       '0':
         'name': 'punctuation.definition.string.end.json5'
