@@ -21,6 +21,9 @@
     'name': 'meta.structure.array.json5'
     'patterns': [
       {
+        'include': '#comments'
+      }
+      {
         'include': '#value'
       }
       {
@@ -63,6 +66,9 @@
         'name': 'punctuation.definition.dictionary.end.json5'
     'name': 'meta.structure.dictionary.json5'
     'patterns': [
+      {
+        'include': '#comments'
+      }
       {
         'comment': 'the json5 object key'
         'include': '#key'
@@ -147,6 +153,10 @@
     ]
   'comments':
     'patterns': [
+      {
+        'match': '/{2}.*'
+        'name': 'comment.single.json5'
+      }
       {
         'begin': '/\\*\\*(?!/)'
         'captures':
