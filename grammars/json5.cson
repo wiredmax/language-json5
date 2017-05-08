@@ -177,6 +177,9 @@
       {
         'include': '#object'
       }
+      {
+        'include': '#comments'
+      }
     ]
   'comments':
     'patterns': [
