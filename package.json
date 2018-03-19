@@ -1,6 +1,6 @@
 {
   "name": "language-json5",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "JSON5 language support in Atom",
   "engines": {
     "atom": "*",
